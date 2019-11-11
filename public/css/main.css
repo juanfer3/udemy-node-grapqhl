@@ -1,0 +1,146 @@
+/* Colors */
+/* font family variables. */
+.navbar-shadow {
+  -webkit-box-shadow: 0px 13px 11px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 13px 11px -7px rgba(0, 0, 0, 0.75);
+}
+
+.button {
+  padding: .8rem 2.2rem;
+  font: normal 500 16px/20px "Roboto", cursive;
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 4px;
+}
+
+.button.primary-button {
+  background: -webkit-gradient(linear, left top, right top, from(#E10098), to(#0098E1));
+  background: linear-gradient(90deg, #E10098 0%, #0098E1 100%);
+  background-clip: padding-box;
+  color: whitesmoke;
+  -webkit-transition: background .6s ease;
+  transition: background .6s ease;
+  -webkit-box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+          box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+}
+
+.button.primary-button:hover {
+  background: whitesmoke;
+  background-clip: padding-box;
+  color: black;
+}
+
+.button.primary-button::after, .button.secondary-button::after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: -webkit-gradient(linear, left top, right top, from(#E10098), to(#0098E1));
+  background: linear-gradient(90deg, #E10098 0%, #0098E1 100%);
+  content: ' ';
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.button.secondary-button {
+  background: white;
+  background-clip: padding-box;
+  -webkit-transition: background .6s ease;
+  transition: background .6s ease;
+}
+
+.button.secondary-button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#E10098), to(#0098E1));
+  background: linear-gradient(90deg, #E10098 0%, #0098E1 100%);
+  color: whitesmoke;
+  -webkit-box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+          box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #E10098;
+}
+
+.title-graphql {
+  color: #E10098 !important;
+}
+
+.text-graphql {
+  color: #0098E1;
+}
+
+/* Services Area */
+.services {
+  background: #FFF5FC;
+  -webkit-box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+          box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+}
+
+.site-main .services-area {
+  padding: 7rem 2rem;
+}
+
+.site-main .services-area .services-title {
+  padding: 0 14rem;
+}
+
+.site-main .services-area .services-title h1 {
+  font-size: 35px;
+}
+
+.site-main > .services-area .services {
+  background: rgba(248, 252, 253, 0.973);
+  padding: 2rem 0;
+  width: 16rem;
+  margin: 5rem .5rem;
+  -webkit-transition: -webkit-box-shadow .7s ease;
+  transition: -webkit-box-shadow .7s ease;
+  transition: box-shadow .7s ease;
+  transition: box-shadow .7s ease, -webkit-box-shadow .7s ease;
+}
+
+.site-main > .services-area .services:hover {
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
+/* End Services Area */
+/* Project Area */
+.site-main .project-area {
+  padding: 4rem 0;
+}
+
+.site-main .project-area .button-group button {
+  background: transparent;
+  border: none;
+  font: normal 500 16px/130px var(--roboto);
+  text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button {
+  padding-left: 3rem;
+}
+
+.site-main .project-area .grid .our-project > .title h4 {
+  font: normal 700 25px/12px var(--roboto);
+}
+
+.site-main .project-area .grid .our-project .img a:hover img {
+  -webkit-filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+          filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+/* End Project Area */
+/* https://www.canva.com/colors/color-wheel/ */
+/*# sourceMappingURL=main.css.map */

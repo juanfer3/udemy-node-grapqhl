@@ -1,12 +1,9 @@
+import { resolvers } from './resolvers/resolvers';
+import { importSchema } from 'graphql-import'
 import { makeExecutableSchema } from 'graphql-tools'
-import {
-    resolvers
-} from './resolvers/resolvers'
 
+const typeDefs = importSchema('Backend/graphql/schema.graphql');
 
-const typeDefs = {};
+const schema = makeExecutableSchema({ typeDefs, resolvers })
 
-export default makeExecutableSchema({
-    typeDefs: typeDefs,
-    resolvers: resolvers
-})
+export { schema }

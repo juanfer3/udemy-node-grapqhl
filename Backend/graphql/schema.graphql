@@ -3,13 +3,19 @@ type Query {
     hello: String,
     greet(name: String): String
     Tasks: [Task]
+    Clients: [Client],
+    getClient(_id: ID): Client,
     getTasks(_id: ID): Task
 } 
 
 type Mutation {
-    createTask( input: TaskInput): Task
-    updateTask(_id: ID!, input: TaskInput): Task
-    deleteTask(_id: ID!): Task
+    createTask( input: TaskInput ): Task
+    updateTask( _id: ID!, input: TaskInput ): Task
+    deleteTask( _id: ID! ): Task
+
+    createClient( input: ClientInput ): Client
+    updateClient( _id:ID!, input: ClientInput ): Client
+    deleteClient( _id:ID! ): Client
 }
 
 type Task {
@@ -22,4 +28,51 @@ type Task {
 input TaskInput{
     title: String!
     description: String
+}
+
+#clients
+type Client {
+    _id: ID,
+    name: String,
+    last_name: String,
+    company: String,
+    age: Int,
+    emails: [Email],
+    type_client: TypeClient,
+    purchases: [Purchase]
+}
+
+input ClientInput {
+    name: String,
+    last_name: String,
+    company: String,
+    age: Int,
+    emails: [EmailInput],
+    type_client: TypeClient,
+    purchases: [PurchaseInput]
+}
+
+enum TypeClient{
+    BASICO,
+    PREMIUN
+}
+
+type  Email{
+    _id: ID,
+    email: String
+}
+
+input  EmailInput{
+    email: String
+}
+
+type Purchase{
+    _id: ID,
+    product: String
+    price: Int
+}
+
+input PurchaseInput{
+    product: String
+    price: Int
 }

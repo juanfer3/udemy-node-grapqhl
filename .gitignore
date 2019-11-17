@@ -1,2 +1,27 @@
 /dist
 /node_modules
+
+#React
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+Frontend/client-graphql-node/coverage
+
+# production
+Frontend/client-graphql-node/build
+
+# misc
+Frontend/client-graphql-node/.DS_Store
+Frontend/client-graphql-node/.env.local
+Frontend/client-graphql-node/.env.development.local
+Frontend/client-graphql-node/.env.test.local
+Frontend/client-graphql-node/.env.production.local
+
+Frontend/client-graphql-node/npm-debug.log*
+Frontend/client-graphql-node/yarn-debug.log*
+Frontend/client-graphql-node/yarn-error.log*

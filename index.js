@@ -25,7 +25,6 @@ app.use(express.json());
 //Routes
 app.use( require('./Backend/routes/routes') )
 
-
 //public
 express.static(__dirname + '/public')
 app.use(express.static(__dirname + '/public'));

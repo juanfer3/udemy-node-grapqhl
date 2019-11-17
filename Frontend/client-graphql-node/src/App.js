@@ -17,6 +17,8 @@ function App() {
         <Router>
           <Fragment>
             <Nabvar/>
+            <br/>
+            <br/>
             <div className="container">
                <Switch>
                  <Route exact path="/" component={Client} />

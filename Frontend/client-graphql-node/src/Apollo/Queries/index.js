@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const CLIENTS_QUERY = gql `{
+const CLIENTS_QUERY = gql `{
     Clients{
         _id
         name
@@ -8,3 +8,19 @@ export const CLIENTS_QUERY = gql `{
         company
     }
 }`;
+
+
+
+export  {
+    CLIENTS_QUERY
+}
+/*
+name
+last_name: "Molina"
+company: "AlejaSAS"
+age: 19
+type_client: PREMIUN
+emails: {
+    email: "ale@gmail.com"
+}
+/* */

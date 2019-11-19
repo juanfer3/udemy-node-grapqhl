@@ -8,7 +8,7 @@ import {
   Button
 } from 'react-bootstrap';
 
-import { CLIENTS_QUERY } from '../../Apollo/Queries';
+import  {CLIENTS_QUERY}  from '../../Apollo/Queries';
 
 function Client() {
   return (

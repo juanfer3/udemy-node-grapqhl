@@ -6,5 +6,8 @@ export const CREATE_CLIENTS = gql `
         _id
         name
         last_name
+        emails {
+            _id
+        }
     }
 }`;

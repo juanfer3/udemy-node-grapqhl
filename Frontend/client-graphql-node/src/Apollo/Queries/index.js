@@ -11,8 +11,27 @@ const CLIENTS_QUERY = gql `{
 
 
 
+const GET_CLIENT = gql `
+    query getClient($id: ID){
+        getClient(_id: $id){
+            _id
+            name
+            last_name
+            type_client
+            company
+            age
+            emails{
+            _id
+            email
+            }
+        }
+    }
+`;
+
+
 export  {
-    CLIENTS_QUERY
+    CLIENTS_QUERY,
+    GET_CLIENT
 }
 /*
 name
@@ -24,3 +43,4 @@ emails: {
     email: "ale@gmail.com"
 }
 /* */
+

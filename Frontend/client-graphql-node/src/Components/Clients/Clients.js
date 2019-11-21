@@ -12,8 +12,8 @@ import  {CLIENTS_QUERY}  from '../../Apollo/Queries';
 
 function Client() {
   return (
-    <Query query={CLIENTS_QUERY}>
-        {({ loading, error, data }) => {
+    <Query query={CLIENTS_QUERY} pollInterval={1000} >
+        {({ loading, error, data, startPolling, stopPolling }) => {
             if(loading) return 'cargando';
             if(error) return `Error: ${ error.message }`;
 

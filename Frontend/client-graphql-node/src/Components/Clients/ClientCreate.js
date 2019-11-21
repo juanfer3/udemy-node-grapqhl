@@ -14,7 +14,7 @@ import {
     Button
   } from 'react-bootstrap';
 
-function ClienteCreate(props) {
+   function ClienteCreate(props) {
     
     const validationSchema = ValidationSchema
    
@@ -26,6 +26,10 @@ function ClienteCreate(props) {
       <Fragment>
           <Mutation mutation={CREATE_CLIENTS}>
                 {createClient => (
+
+
+                  
+
                     <Formik
                     initialValues={{
                         name: "",
@@ -38,25 +42,32 @@ function ClienteCreate(props) {
 
                     validationSchema={validationSchema}
                     
-                    onSubmit={(values, { setSubmitting, resetForm }) => {
+                     onSubmit={(values, { setSubmitting, resetForm }) => {
                     
                     
-                    let input = {
+                    const input = {
                         name: values.name,
                         last_name: values.last_name,
-                        //emails: values.emails,
-                        age: values.age,
+                        emails: values.emails,
+                        age: Number(values.age),
                         company: values.company,
-                        //type_client: values.type_client
+                        type_client: values.type_client
                     }
-                    input.age = Number(input.age)
-                    console.log(input)
+                    
+                  
 
-                    const rsp = createClient({
-                        variables: input
+                    const rsp =    createClient(  {
+                        variables: {input: input}
                     })
                         
-                    console.log(rsp);
+                    rsp.then(data => {
+                        console.log(data)
+                        props.history.push('/')
+                    }).catch(err => {
+                        console.log(err);
+                        
+                    })
+                    
                     
 
                     /*

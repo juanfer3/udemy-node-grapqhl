@@ -1,4 +1,7 @@
 import React, {Fragment} from 'react';
+/* Notifications */
+import ReactNotifications from 'react-notifications-component';
+/* Apollo */
 import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import client from './Apollo/Apollo'
@@ -20,6 +23,7 @@ function App() {
             <br/>
             <br/>
             <div className="container">
+              <ReactNotifications/>
                <Switch>
                  <Route exact path="/" component={Client} />
                  <Route exact path="/clients/new" component={ClientCreate} />

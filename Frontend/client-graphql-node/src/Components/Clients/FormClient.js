@@ -16,14 +16,13 @@ import {
 
 
 function FormClient(props) {
-    const { client } = props
+    const { client, saveData } = props
     const validationSchema = ValidationSchema
    
     const mailsInitial = {
         email: ''
     }
 
-    console.log(client)
   return (
     <Formik
         initialValues={{
@@ -38,8 +37,19 @@ function FormClient(props) {
         validationSchema={validationSchema}
         
         onSubmit={(values, { setSubmitting, resetForm }) => {
-        
-        
+            
+            const input = {
+                name: values.name,
+                last_name: values.last_name,
+                emails: values.emails,
+                age: Number(values.age),
+                company: values.company,
+                type_client: values.type_client
+            }
+            
+
+            saveData(input)
+            
 
         }}
     >

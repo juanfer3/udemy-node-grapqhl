@@ -2,6 +2,9 @@ import React,  { useState, Fragment } from 'react';
 import { Formik, FieldArray, Field  } from 'formik';
 import * as Yup from "yup";
 
+/* Notifications */
+import NotificationMsg  from '../Notifications/NotificationMsg'
+
 import ValidationSchema from '../../Validations/Validations'
 import ErrorField from '../Notifications/ErrorField'
 
@@ -62,6 +65,14 @@ import {
                         
                     rsp.then(data => {
                         console.log(data)
+
+                        NotificationMsg( {
+                            title: "Create Register", 
+                            type: 'success',
+                            message: "Create Register", 
+                            name: input.name
+                          } )
+
                         props.history.push('/')
                     }).catch(err => {
                         console.log(err);

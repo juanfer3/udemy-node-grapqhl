@@ -9,8 +9,6 @@ const CLIENTS_QUERY = gql `{
     }
 }`;
 
-
-
 const GET_CLIENT = gql `
     query getClient($id: ID){
         getClient(_id: $id){
@@ -21,13 +19,11 @@ const GET_CLIENT = gql `
             company
             age
             emails{
-            _id
-            email
+                email
             }
         }
     }
 `;
-
 
 export  {
     CLIENTS_QUERY,
